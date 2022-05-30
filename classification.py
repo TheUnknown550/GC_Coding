@@ -38,7 +38,7 @@ print("accuracy DT test  :{:.2f}".format(decision_tree.score(X_test_std, y_test)
 
 # KNN
 from sklearn.neighbors import KNeighborsClassifier
-knn = KNeighborsClassifier(n_neighbors=5)
+knn = KNeighborsClassifier(n_neighbors=6)#K = 1
 
 knn.fit(X_train_std,y_train)
 
@@ -52,3 +52,27 @@ mlp = MLPClassifier(solver='lbfgs', hidden_layer_sizes=(5,2),random_state=0)
 mlp.fit(X_train_std,y_train)
 print("accuracy MLP train :{:.2f}".format(mlp.score(X_train_std, y_train)))
 print("accuracy MLP test  :{:.2f}".format(mlp.score(X_test_std, y_test)))
+
+import graphviz 
+dot_data = tree.export_graphviz(decision_tree, out_file=None) 
+graph = graphviz.Source(dot_data) 
+graph.render("iris") 
+
+dot_data = tree.export_graphviz(decision_tree, out_file=None, 
+                     feature_names=iris_dataset.feature_names,  
+                     class_names=iris_dataset.target_names,  
+                     filled=True, rounded=True,  
+                     special_characters=True)  
+graph = graphviz.Source(dot_data)  
+graph 
+
+# NN 
+from sklearn.neural_network import MLPClassifier
+mlp = MLPClassifier(hidden_layer_sizes=(4,),random_state=0)
+y_train = y_train
+mlp.fit(X_train_std,y_train.values.ravel())
+print("accuracy MLP (train) :{:.2f}".format(mlp.score(X_train_std, y_train)))
+print("accuracy MLP (test)  :{:.2f}".format(mlp.score(X_test_std, y_test)))
+
+print(y_train.shape)
+
