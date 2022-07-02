@@ -39,11 +39,18 @@
         <hr>
 
         <p id="demo3"></p>
-        <p id="Text1"></p>
+
+        <p class="Text1">Test</p>
+        <p class="Text1">Test</p>
+        <p class="Text1">Test</p>
+        <p class="Text1">Test</p>
+
+
 <!-- Change File Name!! -->
         <script>
             document.getElementById('demo3').innerHTML = "HTML Javascript"
-            let textQuery = document.getElementById('#demo3').innerHTML = "My querySelector"
+            let textQuery = document.querySelector('#demo3').innerHTML = "querySelector"
+            let textQueryAll = document.querySelectorAll('.text1')
 
             console.log(textQuery)
         </script>
