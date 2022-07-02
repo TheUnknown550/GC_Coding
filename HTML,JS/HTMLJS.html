@@ -7,11 +7,22 @@
         <title>Javascript learning</title>
     </head>
     <body>
-        
+        <p id="array"></p>
 
-    <!-- Javascript -->
+        <button onclick="myFun()">
+
+        </button>
+
+        <!-- Javascript -->
         <script>
-            
+            const cars=["Honda","Yamaha"]
+            console.log(cars)
+            let text = ''
+            for(let i = 0; i<cars.length;i++){
+                text += cars[i] + "<br>"
+                console.log(text)
+            }
+            document.getElementById("array").innerHTML = text
             
         </script>
     </body>
