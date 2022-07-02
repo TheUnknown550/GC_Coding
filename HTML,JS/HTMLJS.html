@@ -9,8 +9,12 @@
     <body>
         <p id="array"></p>
 
-        <button onclick="myFun()">
-
+        <button onclick="myFunc()">
+            Hello!
+        </button>
+        
+        <button onclick="setTimeout(myFunc,2000)">
+            Try This and wait
         </button>
 
         <!-- Javascript -->
@@ -24,6 +28,10 @@
             }
             document.getElementById("array").innerHTML = text
             
+            function myFunc(){
+                alert("Hello!!")
+            }
+
         </script>
     </body>
 </html>
