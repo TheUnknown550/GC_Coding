@@ -42,6 +42,7 @@
         <p class="Text1"></p>
         <p id="demo4"></p>
         <p id="demo5"></p>
+        <p id="demo6"
 
 <!-- Change File Name!! -->
         <script>
@@ -63,10 +64,17 @@
 
             a = 5
             b = 6
-            textStr = "is the answer"
+            textStr = " is the answer"
             c = a+b+textStr
 
             console.log(a,"+",b,"=",c)
+
+            function myFunc(p1,p2){
+                console.log(p1*p2)
+                return p1*p2
+            }
+
+            document.getElementById('demo6').innerHTML = myFunc(4,3)
             
         </script>
     </body>
