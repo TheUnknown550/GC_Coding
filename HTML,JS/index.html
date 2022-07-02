@@ -23,6 +23,7 @@
             Hello!
         </button>
 
+        <!-- Change File Name!! -->
         <h1>Turn on off light</h1>
         <button type="button" onclick="document.getElementById('myImage').src = 'image/LightOn.png'">
         Turn light On
@@ -30,14 +31,21 @@
 
         <img id="myImage" src="image/LightOff.png" style="width: 100px">
 
+        <!-- Change File Name!! -->
         <button type="button" onclick="document.getElementById('myImage').src = 'image/LightOff.png'">
             Turn light Off
         </button>
 
+        <hr>
 
-
+        <p id="demo3"></p>
+        <p id="Text1"></p>
+<!-- Change File Name!! -->
         <script>
+            document.getElementById('demo3').innerHTML = "HTML Javascript"
+            let textQuery = document.getElementById('#demo3').innerHTML = "My querySelector"
 
+            console.log(textQuery)
         </script>
     </body>
 </html>
