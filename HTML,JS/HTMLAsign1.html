@@ -32,28 +32,44 @@
 
         <p id="Answer"></p>
 
+        <h1>click to show name</h1>
+        <button onclick="document.getElementById('Namclass').innerHTML = 'Matt Tanthai Cosh'">Button</button>
+        <p id="Namclass"></p>
+
+        <h1>click to show Class</h1>
+        <button onclick="document.getElementById('class').innerHTML = 'M5/7'">Button</button>
+        <p id="class"></p>
+
+        <h1>click to show Number</h1>
+        <button onclick="document.getElementById('Numb').innerHTML = '28'">Button</button>
+        <p id="Numb"></p>
+
+        <h1>click to show School ID</h1>
+        <button onclick="document.getElementById('ID').innerHTML = '43346'">Button</button>
+        <p id="ID"></p>
         <!-- Javascript -->
         <script>
             function getNum(a){
                 num1 = document.getElementById('num1').value;
                 num2 = document.getElementById('num2').value;
                 if(a==1){
-                    value = num1+num2;
+                    valu = parseInt(num1)+parseInt(num2);
                 }
                 if(a==2){
-                    value = num1-num2;
+                    valu = num1-num2;
                 }
                 if(a==3){
-                    value = num1*num2;
+                    valu = num1*num2;
                 }
                 if(a==4){
-                    value = num1/num2;
+                    valu = num1/num2;
                 }
             }
             function Show(){
-                console.log(value)
-                document.getElementById('Answer').innerHTML = value;
+                console.log(valu)
+                document.getElementById('Answer').innerHTML = valu;
             }
+            
             
         </script>
     </body>
